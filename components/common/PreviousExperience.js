@@ -9,16 +9,19 @@ const PreviousExperience = () => {
         <Stack direction='row' spacing={4}>
             <Image 
                 src="/images/ProAceLogo.jpg"
+                alt="Pro Ace Heating Logo"
                 height={100}
                 width={350}
             />
             <Image 
                 src="/images/ProAceLogo.jpg"
+                alt="Pro Ace Heating Logo"
                 height={100}
                 width={300}
             />
             <Image 
                 src="/images/ProAceLogo.jpg"
+                alt="Pro Ace Heating Logo"
                 height={100}
                 width={300}
             />
