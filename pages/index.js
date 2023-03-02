@@ -4,9 +4,9 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { Avatar, Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import NavigationBar from '../components/common/NavigationBar'
 
-const inter = Inter({ subsets: ['latin'] })
+import NavigationBar from '../components/common/NavigationBar'
+import PreviousExperience from '../components/common/PreviousExperience'
 
 export default function Home() {
     return (
@@ -20,8 +20,9 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <Container> 
+                <Container sx={{display: 'flex', 'flex-direction': 'column', alignItems: 'center'}}> 
                     <NavigationBar />
+                    <PreviousExperience />
                 </Container>
             </main>
         </>
