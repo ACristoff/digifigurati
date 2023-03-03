@@ -30,12 +30,12 @@ const PreviousExperience = () => {
             <Paper>
                 <Image 
                     src="/images/EspressoDolceLogo.png"
-                    alt="Pro Ace Heating Logo"
-                    height={150}
-                    width={150}
+                    alt="Espresso Dolce Logo"
+                    height={170}
+                    width={170}
                 />
                 <Typography variant='h5'>Web Developer</Typography>
-                <Typography variant='b1'>Worked on front-end and back-end systems. Strong focus on making a customer-facing website optimized for conversions and SEO.</Typography>
+                <Typography variant='b1'>Worked on a robust mom & pop ecommerce site specializing in espresso machines. Heavily emphasizing SEO for products, and a great customer experience.</Typography>
             </Paper>
         </Stack>
 
