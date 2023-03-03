@@ -1,6 +1,6 @@
 ---
 title: 'I doubled my room in VR'
-date: '2023-03-29'
+date: '2023-03-04'
 description: Recreating a real world space in VR 1:1, and then enhancing it
 ---
 

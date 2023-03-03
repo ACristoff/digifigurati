@@ -7,7 +7,7 @@ const NavigationBar = () => {
 
     return (
         <Box sx={{display: 'flex', 'flex-direction': 'column', alignItems: 'center'}}>
-            <Avatar alt="Alex Cristoffanini Headshot" sx={{ width: 80, height: 80 }}/>
+            <Avatar alt="Alex Cristoffanini Headshot" sx={{ width: 100, height: 100 }}/>
             <Typography variant="h1">Alex Cristoffanini</Typography>
             <Stack direction='row' spacing={2}>
                 <Button variant="text">Web</Button>

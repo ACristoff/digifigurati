@@ -1,6 +1,6 @@
 ---
 title: 'Hello World: A Tale of my new portfolio site'
-date: '2023-03-29'
+date: '2023-03-01'
 description: A journal of my portfolio site project
 ---
 
