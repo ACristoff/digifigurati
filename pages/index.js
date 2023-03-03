@@ -39,11 +39,11 @@ export default function Home({allPostsData}) {
             <main>
                 <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}> 
                     <NavigationBar />
-                    <PreviousExperience />
                     <Box>
                         <Typography variant='h2'>About Me</Typography>
                         <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque, nulla vitae feugiat condimentum, turpis lacus rutrum velit, vitae feugiat risus odio vel metus. Etiam ex lacus, ornare ut dapibus vel, blandit eget tortor. Curabitur nec purus risus. Ut vehicula quam non nibh varius tincidunt. In facilisis ante id sodales vehicula. Aliquam nec commodo augue, nec pulvinar leo. Aenean iaculis lectus in congue hendrerit. Vestibulum eu auctor tortor, vel aliquam purus. Praesent et vehicula elit, at suscipit eros. Integer et tellus nec tortor cursus congue. Cras a volutpat mi, at efficitur mauris.</Typography>
                     </Box>
+                    <PreviousExperience />
                     <Posts type='latest' count={3} posts={allPostsData}/>
                 </Container>
             </main>

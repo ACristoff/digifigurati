@@ -10,7 +10,7 @@ const Post = ({title, description, date}) => {
                     <Typography variant='h5'>
                         {title}
                     </Typography>
-                    <Typography>
+                    <Typography variant="body2" color="text.secondary">
                         {date}
                     </Typography>
                     <Typography>
@@ -27,7 +27,7 @@ const Posts = ({type, count, posts}) => {
 
     return (
         <Box>
-            <Typography>Posts</Typography>
+            <Typography variant='h3'>Latest Posts</Typography>
             <Stack direction='row' spacing={2}>
                 {posts.map((post) => {
                     return (
