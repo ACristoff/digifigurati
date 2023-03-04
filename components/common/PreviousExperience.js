@@ -71,8 +71,8 @@ const Carousel = ({array, renderMethod}) => {
                 <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', width: '80vw', height: '20em', overflowX: 'hidden', gap: '20px'}}>
                     {experiences.map((exp) => {
                         return (
-                            <Paper sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1.2, width: 500, height: '90%'}}>
-                                <div>
+                            <Paper sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1.2, width: 300, height: 200}}>
+                                <div style={{width: 300}}>
                                     <Image
                                         src={exp.image}
                                         alt={exp.altText}
