@@ -1,6 +1,9 @@
-import { Box, Paper, Card, Stack, Typography } from '@mui/material'
+import { Box, Paper, Card, Stack, Typography, IconButton } from '@mui/material'
 import Image from 'next/image'
 import React, { useState } from 'react'
+
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const experiences = [
     {
@@ -12,7 +15,7 @@ const experiences = [
         description: 'Contract role at The Coalition. Working within the web team to provide a AAA web experience for Gears of War fans, as well as providing value to the studio by supporting internal development.'
     },
     {
-        image: '/images/EspessoDolceLogo.png',
+        image: '/images/EspressoDolceLogo.png',
         altText: 'Espresso Dolce Logo',
         position: 'Web Developer',
         height: 60,
@@ -28,22 +31,64 @@ const experiences = [
         description: 'Worked on front-end and back-end systems. Strong focus on making a customer-facing website optimized for conversions and SEO.'
     },
     {
-        image: '',
+        image: '/images/SpiceBoxLogo.png',
         altText: 'Spicebox Logo',
         position: 'Web Developer',
         height: 60,
-        width: 300,
+        width: 110,
         description: 'Overhauled a website meant to service both regular consumers at an individual level, and supply partners on a bulk scale. Managing different kinds of customers and streamlining the process of working with retail partners.'
     },
 ]
 
-const Carousel = (array, renderMethod) => {
+const Carousel = ({array, renderMethod}) => {
     const [arrayIndex, setArrayIndex] = useState(0)
 
+    const changeArrayIndex = (changeType) => {
+        const limit = array.length
+        let currentIndex = arrayIndex
+        console.log(limit, currentIndex, array)
+
+        if (changeType === 'inc') {
+            currentIndex++
+        } else if (changeType === 'dec') {
+            currentIndex--
+        }
+
+        if (currentIndex + 1 > limit) {
+            return setArrayIndex(0)
+        } else  if (currentIndex < 0) {
+            return setArrayIndex(limit - 1)
+        }
+        setArrayIndex(currentIndex)
+        
+    }
+
     return (
-        <>
-        {arrayIndex}
-        </>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
+            <IconButton onClick={(e) => changeArrayIndex('dec')}>
+                <ArrowBackIosIcon />
+            </IconButton>
+                <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', width: '80vw', height: '20em', overflowX: 'hidden', gap: '20px'}}>
+                    {experiences.map((exp) => {
+                        return (
+                            <Paper sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1.2, width: 200, height: '90%'}}>
+                                <Image 
+                                    src={exp.image}
+                                    alt={exp.altText}
+                                    height={exp.height}
+                                    width={exp.width}
+                                />
+                                <Typography variant='h5'>{exp.position}</Typography>
+                                <Typography variant='b1'>{exp.description}</Typography>
+                            </Paper>
+                        )
+                    })}
+                </div>
+                {arrayIndex}
+            <IconButton onClick={(e) => changeArrayIndex('inc')}>
+                <ArrowForwardIosIcon />
+            </IconButton>
+        </div>
     )
 }
 
@@ -51,7 +96,7 @@ const PreviousExperience = () => {
   return (
     <Box sx={{display: 'flex', 'flex-direction': 'column', alignItems: 'center'}}>
         <Typography variant='h2'>Previous Experience</Typography>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', width: '80vw', overflowX: 'hidden', gap: '20px'}}>
+        {/* <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', width: '80vw', overflowX: 'hidden', gap: '20px'}}>
             {experiences.map((exp) => {
                 return (
                     <Paper sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1.2}}>
@@ -66,7 +111,7 @@ const PreviousExperience = () => {
                     </Paper>
                 )
             })}
-        </div>
+        </div> */}
         <Carousel array={experiences} renderMethod={'bluh'}/>
 
     </Box>
