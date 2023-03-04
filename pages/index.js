@@ -10,6 +10,7 @@ import PreviousExperience from '../components/common/PreviousExperience'
 import Posts from '../components/Blog/Posts.js'
 
 import { getSortedPostsData } from '../lib/posts';
+import Footer from '@/components/common/Footer'
 
 export async function getStaticProps() {
 
@@ -49,6 +50,7 @@ export default function Home({allPostsData}) {
                     </Stack>
                 </Container>
             </main>
+            <Footer />
         </>
     )
 }
