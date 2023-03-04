@@ -1,6 +1,6 @@
 import { Box, Paper, Card, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 const experiences = [
     {
@@ -37,11 +37,21 @@ const experiences = [
     },
 ]
 
+const Carousel = (array, renderMethod) => {
+    const [arrayIndex, setArrayIndex] = useState(0)
+
+    return (
+        <>
+        {arrayIndex}
+        </>
+    )
+}
+
 const PreviousExperience = () => {
   return (
     <Box sx={{display: 'flex', 'flex-direction': 'column', alignItems: 'center'}}>
         <Typography variant='h2'>Previous Experience</Typography>
-        <Stack direction='row' spacing={4} sx={{display: 'flex', alignItems: 'center', width: '80vw', overflowY: 'hidden'}}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', width: '80vw', overflowX: 'hidden', gap: '20px'}}>
             {experiences.map((exp) => {
                 return (
                     <Paper sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1.2}}>
@@ -56,32 +66,11 @@ const PreviousExperience = () => {
                     </Paper>
                 )
             })}
-        </Stack>
+        </div>
+        <Carousel array={experiences} renderMethod={'bluh'}/>
 
     </Box>
   )
 }
 
 export default PreviousExperience
-
-{/* 
-<Paper>
-<Image 
-    src="/images/MicrosoftLogo.png"
-    alt="Microsoft Logo"
-    height={60}
-    width={300}
-/>
-<Typography variant='h5'>Full Stack Engineer</Typography>
-<Typography variant='b1'>Contract role at The Coalition. Working within the web team to provide a AAA web experience for Gears of War fans, as well as providing value to the studio by supporting internal development.</Typography>
-</Paper>
-<Paper>
-<Image 
-    src="/images/EspressoDolceLogo.png"
-    alt="Espresso Dolce Logo"
-    height={170}
-    width={170}
-/>
-<Typography variant='h5'>Web Developer</Typography>
-<Typography variant='b1'>Worked on a robust mom & pop ecommerce site specializing in espresso machines. Heavily emphasizing SEO for products, and a great customer experience.</Typography>
-</Paper> */}
