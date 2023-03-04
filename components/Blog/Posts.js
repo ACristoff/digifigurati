@@ -26,7 +26,7 @@ const Posts = ({type, count, posts}) => {
 
 
     return (
-        <Box>
+        <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Typography variant='h3'>Latest Posts</Typography>
             <Stack direction='row' spacing={2}>
                 {posts.map((post) => {

@@ -13,7 +13,7 @@ const Footer = () => {
         <Typography>Alex Cristoffanini 2023 Footer</Typography>
         <Stack direction='row' spacing={4}>
             <LinkedInIcon color='primary' fontSize='large' />
-            <GitHubIcon color='primary' fontSize='large' />
+            <GitHubIcon color='primary' fontSize='large'/>
             <TwitterIcon color="primary" fontSize='large' /> @Digifigurati
             <Avatar /> itch.io
             <Typography>email</Typography>
